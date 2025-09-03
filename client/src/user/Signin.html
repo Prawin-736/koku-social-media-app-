@@ -1,0 +1,61 @@
+<!doctype html  >
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Koku-sign In</title>
+    <base href="/">
+    <link rel="icon" href="../assets/icon/feather.svg">
+    <link rel="stylesheet" href="../user/user.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body class="bg-info-subtle">
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    
+    <!-- login section -->
+    <div class="login bg-white p-4 rounded-3 shadow mx-3" style="max-width: 100%; width: 380px;" >
+      <div class="login__logo d-flex flex-column justify-content-center align-items-center m-3">
+        <img src="../assets/icon/feather.svg" class="login-logo" alt="Koku logo" style="width: 52px;">
+        <h4 class="login__brand">Koku</h4>
+      </div>
+
+      <!-- error message -->
+      <div class="login__error-message  d-flex justify-content-center mb-4 d-none" id="error-box">
+
+      </div>
+
+      <!-- login form starts -->
+      <form action="" class=" login__form d-flex flex-column " autocomplete="on" id="login__form">
+        <div class="mb-3 login__form-group">
+          <input type="text" id="form-input" class=" form-control " placeholder="Email address" autocomplete="email" >
+        </div>
+        <div class="mb-3 login__form-group">
+          <input type="password"class="form-control " id="form-password" placeholder="Password" autocomplete="current-password" >
+        </div>
+        <div class="mb-3 login__form-group">
+          <button class="btn btn-primary btn-md w-100 ">Login</button>
+        </div>
+        </form>
+        <!-- login form end -->
+
+        <div class="login__divider border-bottom border-1 mb-1"></div>
+        <div class=" login__links d-flex justify-content-between px-3 mb-4">
+          <a class="text-primary" id="redirect-forgot-password" style="cursor: pointer;">Forgot password?</a>
+          <a class="text-primary" id="redirect-signup" style="cursor: pointer;">Signup</a>
+        </div>
+        
+        <!-- success message -->
+        <div class="login__success-message d-flex justify-content-center " id="success-box">
+        </div>
+      </div>
+    </div>
+     
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>  
+    <!-- custom java script -->
+<script type="module" src="../user/Signin.js"></script>
+  </body>
+</html>

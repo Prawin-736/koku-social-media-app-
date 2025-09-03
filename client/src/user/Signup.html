@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Koku-Sign up</title>
+    <base href="/">
+    <link rel="icon" href="../assets/icon/feather.svg">
+    <link rel="stylesheet" href="../user/user.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body class="bg-info-subtle">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="signup bg-white p-4 rounded-2 shadow m-3" style="width:380px; max-width: 100%;">
+            <div class="signup__logo d-flex flex-column align-items-center mb-2">
+                <img src="../assets/icon/feather.svg" alt="Koku logo" style="height: 42px;">
+                <h5 class="signup__brand">Koku</h5>
+            </div>
+            <div class="signup__heading d-flex justify-content-center mb-2">
+                <h5>Create a new account</h5>
+            </div>
+            <!-- error message --> 
+            <div class="signup__error-message  d-flex justify-content-center mb-3 d-none" style="text-align: center;" id="signup-error-message" >
+                <!-- <small class="bg-danger-subtle px-4 py-2  rounded-2">🔶 Please fill out all required fields. </small> -->
+                <small class="bg-danger-subtle px-4 py-2  rounded-2"></small>
+              </div>
+              
+              <!-- form starts -->
+            <form action="" class="signup__form" id="signup-form">
+                <div class="signup__form-group mb-3">
+                    <input type="text" placeholder="User name" name="username" id="userName" class="form-control" autocomplete="name">
+                </div>
+                <div class="signup__form-group mb-3">
+                    <small>Date of birth</small>
+                    <input type="date" class="form-control" name="DOB" id="dateOfBirth" autocomplete="bday">
+                </div>
+                <div class="signup__form-group mb-3 d-flex flex-column">
+                    <small class="mb-1">Gender</small>
+                    <div class="radio border px-4 py-1 rounded-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="maleBox" value="option1">
+                            <label class="form-check-label" for="maleBox">Male</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="femaleBox" value="option2">
+                            <label class="form-check-label" for="femaleBox">Female</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="otherBox" value="option3">
+                            <label class="form-check-label" for="otherBox">other</label>
+                          </div>
+                    </div>
+                    
+                </div>
+                <div class="signup__form-group mb-3">
+                    <input type="email" class="form-control" placeholder="Email address" name="email" id="email" autocomplete="email">
+                </div>
+                <div class="signup__form-group mb-3">
+                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" autocomplete="new-password">
+                </div>
+                <div class="signup__form-group mb-3">
+                <button class="btn btn-primary" style="width: 100%;cursor: pointer;">Sign up</button>
+                </div>
+                <div class="signup__formgroup d-flex justify-content-center mb-3 " id="signup-formgroup">
+                    <button class="btn btn-outline-secondary" style="cursor: pointer;">Back to login</button>
+                </div>
+            </form>
+            <!-- form ends -->
+
+            <!-- success message -->
+             <div class="signup__success-message d-flex justify-content-center mb-3 d-none " id="signup-success-message" >
+                <!-- <small class="bg-success-subtle rounded-2 px-4 py-2"></small> -->
+                <!-- <small class="bg-success-subtle rounded-2 px-4 py-2">✅ Account successfully created! </small> -->
+             </div>
+        </div>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+<!-- custom common java script -->
+    <script type="module" src="../user/Signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,492 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+/* ----------------------!!!!!!!!!!!!!!!!!!!background and color setting!!!!!!!!!!!!!! */
+/* ----------default mode */
+.background-white{
+  background-color: white;
+}
+.background-info-bg-subtle{
+  background-color: #cff4fc
+}
+/* default font color */
+.font-color-black{
+  color: #212529;
+}
+
+
+/* -----------------------------default mode --------------------- */
+
+/*----------------- bootstrap dark theme custom color setup */
+[data-bs-theme="dark"] .background-white {
+  background-color: #212529;
+  /* border: #343a40 solid 1px; */
+}
+
+[data-bs-theme="dark"] .background-info-bg-subtle {
+  background-color: #121212; 
+}
+
+[data-bs-theme="dark"] .font-color-black{
+  color: white;
+}
+
+[data-bs-theme="dark"] .navbar-logo__icon {
+    filter: brightness(0) invert(1) ;
+}
+
+[data-bs-theme="dark"] .dropdown-icon{
+    filter: brightness(0) invert(1) ;
+}
+
+[data-bs-theme="dark"] .dropdown-item:hover {
+  background-color: #343a40 !important;
+}
+
+[data-bs-theme="dark"] .collapse-count{
+  border-color: white !important;
+}
+
+/*----------------- bootstrap dark theme custom color setup ----------------------------*/
+
+/* ----------------------!!!!!!!!!!!!!!!!!!!background and color setting!!!!!!!!!!!!!! -----------------------*/
+
+
+
+/*----------------- bootstrap dark theme custom color setup--------------------------------- */
+
+/* --------------navbar user area */
+.navbar-user{
+    padding-right: 1.5rem;
+}
+
+.navbar-user__dp{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color:aqua ;
+    border-radius: 50%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.navbar-user__dp img ,.posting__dp img,.comment__dp{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+
+}
+.navbar-user__dropdown{
+    margin-left: .5rem;
+    margin-right: .5rem; 
+}
+
+@media screen and (max-width: 768px) {
+    /* navbar logo */
+    .navbar-logo__icon{
+        width: 27px !important;
+    }
+    .navbar-logo__brand{
+        font-size: medium;
+    }
+
+    /* navbar user */
+    .navbar-user{
+        padding-right: 0px !important;
+      }
+    .navbar-user__name{
+        display:none !important;
+    }
+      .navbar-user__dp{
+        margin-right: 0px;
+      }
+
+      /* navbar dropdown */
+      .navbar-user__dropdown{
+        margin-left: 0rem;
+
+    }
+  
+}
+
+/* --------------navbar user area------------------ */
+
+/* ---------------navbar main  */
+
+/* background colors for navbar */
+ .active-friends-icon,.active-members-icon,.active-my-account-icon,.active-home-icon{
+    filter: invert(29%) sepia(96%) saturate(2259%) hue-rotate(208deg) brightness(97%) contrast(104%);
+    height: 1.8rem !important;    
+}
+
+[data-bs-theme="dark"] .navbar-icon{
+  filter: invert(85%) sepia(0%) saturate(0%) hue-rotate(185deg) brightness(92%) contrast(90%) !important;
+}
+
+[data-bs-theme="dark"] .active-friends-icon,[data-bs-theme="dark"] .active-members-icon,[data-bs-theme="dark"] .active-home-icon,[data-bs-theme="dark"] .active-my-account-icon{
+    filter: brightness(0) invert(1) !important;
+}
+
+
+/* -------------dropdown */
+
+.dropdown-item:hover {
+    background-color: transparent !important;
+
+}
+
+/* hover primary */
+.hover-primary:hover small{
+    color: #0d6efd !important;
+    text-decoration: underline;
+}
+.hover-primary:hover img{
+    filter: invert(22%) sepia(48%) saturate(5580%) hue-rotate(219deg) brightness(111%) contrast(98%); ;
+}
+
+/* hover danger */
+.dropdown__logout:hover small{
+    color: #dc3545 !important;
+    text-decoration: underline;
+    
+}
+.dropdown__logout:hover img {
+    filter: invert(33%) sepia(83%) saturate(2132%) hue-rotate(332deg) brightness(86%) contrast(101%);
+}
+
+/* removing default settings like bluew and underline from default settings */
+.collapse-iteam{
+    background-color: transparent !important;
+    color: #000000;
+    text-decoration: none;
+}
+
+.collapse-count{
+    border-width: 1px;
+    border-color: #000000 !important;
+}
+
+
+
+/* setting pointer for all the options in dropdown to avoid text seleciton cursor */
+.dropdown-menu {
+    user-select: none;
+  }
+  
+  .dropdown-menu * {
+    cursor: default;
+  }
+  
+  .dropdown-menu a,
+  .dropdown-menu button,
+  .dropdown-menu input,
+  .dropdown-menu label {
+    cursor: pointer;
+  }
+
+  /* -------------dropdown----------------------- */
+
+  /* -----------main */
+
+  .main-side{
+    width: 36%;
+    overflow-y: scroll;
+
+}
+
+.main-side::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  @media (max-width: 991px){
+    .left-side-main,
+        .right-side-main{
+            width: 15% !important;
+        }
+        .main-side{
+          width: 70% !important;
+        }
+  }
+      @media (max-width: 768px) {
+        
+        .left-side-main,
+        .right-side-main{
+            display: none;
+        }
+        .main-side {
+          width: 100% !important;
+        }
+      }
+
+/* ---------------posting */
+
+
+  .posting{
+    height: 4.2rem; 
+    width: 100%;
+  }
+
+  
+.posting__dp{
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color:aqua ;
+    border-radius: 50%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.posting-action{
+    height: 2.4rem;
+    width: 80%;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+    padding-left: 1rem;
+    border: #000000 solid 1px;
+
+}
+
+[data-bs-theme="dark"] .posting-action:hover{
+background-color: #495057 !important;
+}
+
+
+.posting-action:hover{
+    background-color: #f8f9fa !important;
+}
+
+/* posting modal */
+
+ .post-textarea {
+      resize:none; 
+       /* scrollbar-width: none; */
+      min-height: 1.2em;
+      max-height: 6rem; 
+      line-height: 1.6em;
+      padding: 4px;
+      font-size: 16px;
+      display: block;
+     box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.2);
+
+    }
+/* ---------------posting ---------------------*/
+
+/* ------------------------post */
+
+   .text-container {
+      width: 100%;
+      overflow: hidden;
+      font-size: medium;
+      line-height: 1.2;
+      max-height: 2.4rem; 
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+  
+     .show-more , .show-less{
+      color: #0d6efd;
+      cursor: pointer;
+      font-size: small;
+      font-weight: bold;
+      display: inline;
+      position: relative;
+    }
+
+.dropdown-item:hover{
+    background-color:#f8f9fa !important;
+}
+
+
+.no-fill {
+  filter: grayscale(100%);
+}
+
+.post-like-active{
+  filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(3366%) hue-rotate(338deg) brightness(97%) contrast(92%);
+}
+
+.like-button:hover{
+background-color: #f8f9fa !important;
+}
+.comment-button:hover{
+background-color: #f8f9fa !important;
+}
+
+.count-circle{
+    height: 1.25rem;
+    width: 1.25rem;
+    border:#000000 1px solid;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+
+/* edit Post modal */
+
+ .edit-Post-textarea {
+      resize:none; 
+      /* scrollbar-width: none; */
+      min-height: 1.2em;
+      max-height: 6rem; 
+      line-height: 1.6em;
+      padding: 4px;
+      font-size: 16px;
+      display: block;
+     box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.2);
+
+    }
+
+/* comment */
+.comment__dp{
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color:aqua ;
+    border-radius: 50%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.comment__dp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+   box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+
+}
+
+.comment-like-active{
+  filter: brightness(0) saturate(100%) invert(26%) sepia(97%) saturate(3366%) hue-rotate(338deg) brightness(97%) contrast(92%);
+}
+/* ------------------------post----------------------- */
+
+
+
+     .text {
+      /* overflow: hidden; */
+      display: -webkit-box;
+      /* -webkit-line-clamp: 3; */
+      -webkit-box-orient: vertical;
+      line-height: 1.4em; /* important for height calc */
+      max-height: 4.2em;  /* 3 lines × line-height */
+      transition: max-height 0.3s ease;
+    }
+
+    .text.expanded {
+      /* -webkit-line-clamp: unset; */
+      max-height: 1000px; /* large enough to show all text */
+    }
+
+     .more-button {
+      margin-top: 10px;
+      cursor: pointer;
+      color: blue;
+      user-select: none;
+    }
+
+    .post-image-container{
+      width:100%;
+       height:auto; 
+    }
+
+    .post-image{
+      width: 100%;
+      height:auto; 
+      max-height:32rem;
+      object-fit: cover;
+      /* overflow: hidden; */
+    }
+      /* -------------------main---------------- */
+
+
+      .hide-with-important {
+    display: none !important;
+}
+
+
+/* userAccount section */
+.userAccount__dp{
+    width: 2.6rem;
+    height: 2.6rem;
+    background-color:aqua ;
+    border-radius: 50%;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) ;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    overflow: hidden;
+     flex-shrink: 0;             /* Prevents shrinking in flex container */
+    aspect-ratio: 1 / 1;
+    
+}
+.userAccount__dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fills the circle completely */
+  display: block;
+}
+
+.userDetailEdit:hover{
+  filter: invert(22%) sepia(48%) saturate(5580%) hue-rotate(219deg) brightness(111%) contrast(98%);
+}
+
+/* user profile update section */
+ label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      font-size: 1.05em;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .gender-group {
+      margin-bottom: 20px;
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      align-items: center;
+    }
+
+    .gender-options label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: normal;
+      font-size: 1em;
+    }
+
+    .info {
+      font-size: 0.9em;
+      color: #555;
+    }
