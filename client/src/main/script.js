@@ -1361,8 +1361,6 @@ ActivateIcon();
 
     }
 
-  }
-
     const navbarDp = document.querySelector("#navbar-user-dp");
     const postingDp = document.querySelector("#posting-dp");
 
@@ -1384,7 +1382,6 @@ ActivateIcon();
    postingDp.innerHTML = "";
    postingDp.appendChild(image.cloneNode(true));
    }
-     return;
 
     }else{
   
@@ -1402,18 +1399,20 @@ if (removeButtonContainer) {
    navbarDp.style.justifyContent = "center";
    navbarDp.style.alignItems = "center";  
    navbarDp.style.fontWeight = "bold"; 
+   navbarDp.style.color = "black";
    if(postingDp){
     postingDp.textContent=firstTwoLetter;
     postingDp.style.display="flex";
     postingDp.style.justifyContent="center";
     postingDp.style.alignItems="center";
     postingDp.style.fontWeight="bold";
+    postingDp.style.color = "black";
    }
 
   // background setter function for setting first two letter
   dp_background_setter(result.username);
     }
-    
+  }    
 });
 //-------------------------username,dp,load for navbar and posting---------------------------------------//
 

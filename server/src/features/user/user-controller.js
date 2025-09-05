@@ -11,21 +11,31 @@ export default class UserController {
     this.userRepository = new UserRepository();
   }
 
-  async findUser(req, res, next) {
-    const userId = req.userId;
-    try {
-      const result = await this.userRepository.getUser(userId);
-      if (result.profilepicture) {
-        return res.status(200).send(result);
-      }
-      if (res){
-return res.status(200).send({ username: result.username });
-      } 
-    } catch (err) {
-      console.log('findUser controller Error : ', err);
-      next(err);
+
+
+async findUser(req, res, next) {
+  const userId = req.userId;
+  try {
+    const result = await this.userRepository.getUser(userId);
+
+    // return username and displayMode
+    //fallbacks to light mode when diplaymode is undefined.
+    const response = {
+      username: result.username,
+      displayMode: result.displayMode || 'light'  
+    };
+
+    if (result.profilepicture) {
+      response.profilepicture = result.profilepicture;
     }
+
+    return res.status(200).send(response); 
+  } catch (err) {
+    console.log('findUser controller Error : ', err);
+    next(err);
   }
+}
+
 
   //signUp
   async signUp(req, res, next) {
